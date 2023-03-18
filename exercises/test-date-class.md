@@ -53,3 +53,41 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+1)
+[] -> false
+[01] -> false
+[01/01] -> false
+[01/01/01] -> false
+[2000] -> false
+[2000/2000] -> false
+[01/01/2001] -> true
+[31/01/2001] -> true
+[32/01/2001] -> false
+[01/12/2001] -> true
+[01/13/2001] -> false
+[31/12/2001] -> true
+[-5/01/2001] -> false
+[01/-5/2001] -> false
+[01/01/-5] -> false
+[29/02/-5] -> false
+[29/02/2001] -> false
+[29/02/2004] -> true
+[29/02/2000] -> true[29/02/2000] -> true
+[29/02/1900] -> false
+
+2)
+Ma couverture est de 100%.
+Pour cette étape, j'ai lancé des tests de couverture, et j'ai fait des tests jusqu'à ce que le nombre aille jusqu'à 100.
+
+3)
+Oui, il y a un test avec plus de 2 booléens, c'est pour tester si le mois a 30 ou 31 jours (Hors Février).
+
+Le morceau de code à exécuter est : 
+
+"else if (month == 4 || month == 6 || month == 9 || month == 11)" dans la fonction "int getDaysInMonth(int month, int year)"
+
+Je l'ai testé en faisant un test pour chaque fin de mois.
+
+4)
+
+22 mutants ont été créés, et 22 ont été supprimés.

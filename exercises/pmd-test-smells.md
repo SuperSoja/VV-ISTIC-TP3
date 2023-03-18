@@ -15,3 +15,34 @@ Include the improved test code in this file.
 
 ## Answer
 
+1)
+
+ 	The class 'TestOption' might be a test class, but it contains no test cases.
+
+2)
+
+Voici la ruleset :
+
+J'ai exécuté la commande suivante :
+
+./run.sh pmd -d "/home/yehidjineri/Documents/M2/V&V/CLI/commons-cli/src/test/java/org/apache/commons/cli" -f html -R "rulesets/java/junit.xml" > rapport.html
+
+cela exécute la ruleset de Junit dans le code de CLI et a trouvé ce vrai positif :
+la règle est : TestClassWithoutTestCases
+
+
+private static class TestOption extends Option {
+        private static final long serialVersionUID = 1L;
+
+        TestOption(final String opt, final boolean hasArg, final String description) throws IllegalArgumentException {
+            super(opt, hasArg, description);
+        }
+
+        @Override
+        public boolean addValue(final String value) {
+            addValueForProcessing(value);
+            return true;
+        }
+}
+
+Le problème est que cette classe est nommée en commencant par Test, mais qu'elle possède une fonction qui ne porte pas un nom commencant par Test.

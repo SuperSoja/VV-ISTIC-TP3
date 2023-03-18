@@ -26,3 +26,21 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
+1)
+ Cela a été fait dans le fichier de test : StringUtilsTest
+
+2)
+
+My coverage is 100%.
+
+3)
+
+Non, je n'en ai pas.
+
+4)
+
+Après la ligne de commande : "mvn test pitest:mutationCoverage"
+Et j'ai obtenu : 
+
+>> Generated 22 mutations Killed 22 (100%)
+>> Ran 25 tests (1.14 tests per mutation)
